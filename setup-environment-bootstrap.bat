@@ -33,8 +33,14 @@ SET PATH=%PATH%;C:\ProgramData\chocolatey\bin
 choco install git -y
 SET PATH=%PATH%;C:\Program Files\Git\cmd
 
+:: clone public pni-build repository which contains this file
+git clone https://github.com/PNIDigitalMedia/pni.build.git build
+
 :: clone phoenix repository and switch to develop branch
 git clone  http://vantfsapp.photochannel.net:8080/tfs/SharedServices/_git/PHX/ phoenix --branch feature/cake-script
 
 :: call rest of the script from a private repository
 call phoenix\Build\setup-environment.bat
+
+:: delete this script, as we have it now in a build folder
+(goto) 2>nul & del "%~f0"
