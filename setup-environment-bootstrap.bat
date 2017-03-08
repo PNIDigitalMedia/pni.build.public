@@ -39,6 +39,9 @@ git clone https://github.com/PNIDigitalMedia/pni.build.git build
 :: clone phoenix repository and switch to develop branch
 git clone  http://vantfsapp.photochannel.net:8080/tfs/SharedServices/_git/PHX/ phoenix --branch feature/cake-script
 
+:: clone photosite repository and switch to develop branch
+git clone http://vantfsapp:8080/tfs/Retailers/_git/Staples.Legacy.Site photosite --branch develop
+
 :: call rest of the script from a private repository
 call phoenix\Build\setup-environment.bat
 
