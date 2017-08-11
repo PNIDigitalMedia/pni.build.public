@@ -34,7 +34,7 @@ choco install git -y
 SET PATH=%PATH%;C:\Program Files\Git\cmd
 
 :: clone phoenix repository and switch to develop branch
-git clone  http://vantfsapp.photochannel.net:8080/tfs/SharedServices/_git/PHX/ phoenix --branch feature/cake-script
+git clone https://pnimedia.visualstudio.com/Phoenix/_git/PHX phoenix --branch develop
 
 :: call rest of the script from a private repository
 call phoenix\Build\setup-environment.bat
